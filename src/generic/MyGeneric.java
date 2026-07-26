@@ -12,6 +12,15 @@ public class MyGeneric {
     }
 }
 
+/*
+
+   T -> type
+   E -> element
+   K -> key
+   V -> value
+
+ */
+
     class Displayer<T>{
         T num;
 
