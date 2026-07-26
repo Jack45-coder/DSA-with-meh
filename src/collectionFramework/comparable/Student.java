@@ -2,10 +2,10 @@ package collectionFramework.comparable;
 
 public class Student implements Comparable<Student> {
     int roll;
-    String name;
-    int marks;
+    public String name;
+    public int marks;
 
-    Student(int roll, String name, int marks){
+    public Student(int roll, String name, int marks){
         this.roll = roll;
         this.name = name;
         this.marks = marks;
