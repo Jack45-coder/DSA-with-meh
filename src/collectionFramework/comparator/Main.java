@@ -2,6 +2,7 @@ package collectionFramework.comparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -20,7 +21,20 @@ public class Main {
 
         System.out.println("After sorted");
 
-        Collections.sort(employees, new MyCustomComparator());
+        // Using Custom Comparator Class:-
+//        Collections.sort(employees, new MyCustomComparator());
+
+        // Using Comparator with Anonymous Class:-
+        Collections.sort(employees, new Comparator<Employee>() {
+            @Override
+            public int compare(Employee e1, Employee e2) {
+                if (e1.salary < e2.salary){
+                    return 1;
+                }else {
+                    return -1;
+                }
+            }
+        });
 
         for(Employee employee : employees){
             System.out.println("Employee: " + employee.name + " | Salary: " + employee.salary);
