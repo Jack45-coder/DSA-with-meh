@@ -14,7 +14,20 @@ public class RightAngledTrangle {
 
         System.out.println("Inverted Right Angled Trangle");
         for (int i = 0; i < r; i++){
-            for (int j = 0; j < r-i; j++){
+            for (int j = 0; j < (r-i); j++){
+                System.out.print(" * ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("Mirrored Right Angled Trangle");
+        for (int i = 1; i <= r; i++){
+            //spaces
+            for (int j = 1; j <= (r-i); j++){
+                System.out.print(" ");
+            }
+            //star
+            for (int k = 1; k <= i; k++){
                 System.out.print(" * ");
             }
             System.out.println();
