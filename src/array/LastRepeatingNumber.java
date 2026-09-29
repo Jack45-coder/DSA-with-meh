@@ -5,16 +5,15 @@ import java.util.Scanner;
 public class LastRepeatingNumber {
     public static int lastRepeatingNumber(int[] arr){
         int size = arr.length;
-        int ans = 0;
 
-        for(int i = 0; i < size; i++){
-            for (int j = i+1; j < size; j++){
+        for(int i = size-1; i >= 0; i--){
+            for (int j = i-1; j >= 0; j--){
                 if (arr[i] == arr[j]){
-                    ans = arr[i];
+                    return arr[i];
                 }
             }
         }
-        return ans;
+        return -1;
     }
 
     public static void main(String[] args) {
