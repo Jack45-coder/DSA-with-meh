@@ -20,6 +20,26 @@ public class RotateArray {
         return ans;
     }
 
+    public static void reverse(int[] arr, int st, int end){
+        while (st < end){
+            int temp = arr[st];
+            arr[st] = arr[end];
+            arr[end] = temp;
+
+            st++;
+            end--;
+        }
+    }
+
+    public static void rotateInPlace(int[] arr, int k){
+        int n = arr.length;
+        k = k % n;
+        reverse(arr, 0, n-k-1); // reverse 1st part
+        reverse(arr, n-k, n-1); // reverse 2nd part
+        reverse(arr, 0, n-1); // reverse full array
+
+    }
+
     public static void printArray(int[] arr){
         for(int i = 0; i < arr.length; i++){
             System.out.print(STR."\{arr[i]} ");
@@ -41,7 +61,8 @@ public class RotateArray {
 
         System.out.println("times of rotate: ");
         int k = sc.nextInt();
-        int[] rotateArr = rotate(arr, k);
-        printArray(rotateArr);
+        rotateInPlace(arr, k);
+//        int[] rotateArr = rotate(arr, k);
+        printArray(arr);
     }
 }
