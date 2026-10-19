@@ -19,7 +19,7 @@ public class LastRepeatingNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter size of arr: ");
+        System.out.println("Enter size of arr2D: ");
         int s = sc.nextInt();
         int[] arr = new int[s];
 

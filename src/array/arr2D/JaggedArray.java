@@ -1,4 +1,4 @@
-package array;
+package array.arr2D;
 
 public class JaggedArray {
     public static void main(String[] args) {

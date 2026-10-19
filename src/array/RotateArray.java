@@ -50,7 +50,7 @@ public class RotateArray {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter size of arr: ");
+        System.out.println("Enter size of arr2D: ");
         int s = sc.nextInt();
         int[] arr = new int[s];
 
@@ -62,7 +62,7 @@ public class RotateArray {
         System.out.println("times of rotate: ");
         int k = sc.nextInt();
         rotateInPlace(arr, k);
-//        int[] rotateArr = rotate(arr, k);
+//        int[] rotateArr = rotate(arr2D, k);
         printArray(arr);
 
         sc.close();

@@ -154,10 +154,10 @@ public class SortArray {
         System.out.print("Original array: ");
         printArray(arr);
 //        System.out.print("Sorted array: ");
-//        sortZerosAndOneOptimised(arr);
-//        printArray(arr);
-//        sortOddAndEven(arr);
-//        sortSquared(arr);
+//        sortZerosAndOneOptimised(arr2D);
+//        printArray(arr2D);
+//        sortOddAndEven(arr2D);
+//        sortSquared(arr2D);
         System.out.print("Original array: ");
         sortSquaredII(arr);
 
