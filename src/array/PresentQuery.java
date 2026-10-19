@@ -35,5 +35,7 @@ public class PresentQuery {
             else System.out.println("NO");
             q--;
         }
+
+        sc.close();
     }
 }

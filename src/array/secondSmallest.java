@@ -41,5 +41,7 @@ public class secondSmallest {
 
         int nd2Smallest = secondSmallest(arr);
         System.out.println("second smallest number in an array: " +nd2Smallest);
+
+        sc.close();
     }
 }

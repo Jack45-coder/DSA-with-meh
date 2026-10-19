@@ -38,5 +38,6 @@ public class RangeQuery {
             System.out.println("Sum: " + ans);
         }
 
+        sc.close();
     }
 }

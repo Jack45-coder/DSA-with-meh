@@ -30,5 +30,7 @@ public class LastRepeatingNumber {
 
         int lastRepeating = lastRepeatingNumber(arr);
         System.out.println("last repeating number: "+lastRepeating);
+
+        sc.close();
     }
 }

@@ -33,5 +33,7 @@ public class FirstRepeatingNumber {
         int firstRepeating = firstRepeatingNumber.firstRepeatingNumber(arr);
 
         System.out.println("first repeating number: " +firstRepeating);
+
+        sc.close();
     }
 }

@@ -64,5 +64,7 @@ public class RotateArray {
         rotateInPlace(arr, k);
 //        int[] rotateArr = rotate(arr, k);
         printArray(arr);
+
+        sc.close();
     }
 }

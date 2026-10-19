@@ -1,4 +1,4 @@
-package array;
+package array.twoPointerApproach;
 
 public class SearchTarget {
     static int targetSearch(int[] arr, int target){

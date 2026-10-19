@@ -36,5 +36,6 @@ public class TargetSum {
         int[] result = targetSum(arr, target);
         System.out.println(Arrays.toString(result));
 
+        sc.close();
     }
 }

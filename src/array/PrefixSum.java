@@ -44,5 +44,6 @@ public class PrefixSum {
         makePrefixSum(arr);
         printArray(arr);
 
+        sc.close();
     }
 }

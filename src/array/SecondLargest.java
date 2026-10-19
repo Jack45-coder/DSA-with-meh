@@ -50,5 +50,6 @@ public class SecondLargest {
         System.out.println("2ndMax in an array: " + secondMax);
 
 
+        sc.close();
     }
 }
