@@ -13,21 +13,39 @@ public class MatrixProb {
         }
     }
 
-    static void addition2Matrix(int[][] arr, int r, int c, int[][] arr2, int r2, int c2){
-        if(r != r2 || c != c2){
+    static void addition2Matrix(int[][] arr, int r1, int c1, int[][] arr2, int r2, int c2){
+        if(r1 != r2 || c1 != c2){
             System.out.println("Wrong Input - Addition not possible");
             return;
         }
 
-        int[][] sum = new int[r][c];
+        int[][] sum = new int[r1][c1];
 
-        for(int i = 0; i < r; i++){
-            for(int j = 0; j < c; j++){
+        for(int i = 0; i < r1; i++){
+            for(int j = 0; j < c1; j++){
                 sum[i][j] = arr[i][j] + arr2[i][j];
             }
         }
 
         printArray(sum);
+    }
+
+    static void multiplication2Matrix(int[][] arr, int r1, int c1, int[][] arr2, int r2, int c2){
+        if(c1 != r2){
+            System.out.println("Wrong Dimensions - Multiplication not possible");
+            return;
+        }
+
+        int[][] res = new int[r1][c2];
+        for(int i = 0; i < r1; i++){
+            for(int j = 0; j < c2; j++){
+                for(int k = 0; k < c1; k++){
+                    res[i][j] = arr[i][k]*arr2[k][j];
+                }
+            }
+        }
+        System.out.println("Multiplication of 2 matrices");
+        printArray(res);
     }
 
     public static void main(String[] args) {
@@ -61,8 +79,8 @@ public class MatrixProb {
             }
         }
 
-        addition2Matrix(arr, r, c, arr2, r2, c2);
-
+//        addition2Matrix(arr, r, c, arr2, r2, c2);
+          multiplication2Matrix(arr, r, c, arr2, r2, c2);
         sc.close();
     }
 }
