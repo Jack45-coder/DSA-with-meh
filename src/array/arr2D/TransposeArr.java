@@ -24,6 +24,18 @@ public class TransposeArr {
         return trans;
     }
 
+    static void transposeInPlace(int[][] arr, int r, int c){
+        if(r != c) return;
+
+        for(int i = 0; i < r; i++){
+            for(int j = i; j < c; j++){
+                int temp = arr[i][j];
+                arr[i][j] = arr[j][i];
+                arr[j][i] = temp;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -41,7 +53,10 @@ public class TransposeArr {
             }
         }
 
-        int[][] trans = makeTranspose(arr, r, c);
-        printArr(trans);
+        transposeInPlace(arr, r, c);
+        printArr(arr);
+
+//        int[][] trans = makeTranspose(arr, r, c);
+//        printArr(trans);
     }
 }
