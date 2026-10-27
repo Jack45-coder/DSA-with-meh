@@ -12,6 +12,20 @@ public class TransposeArr {
         }
     }
 
+    static void rev(int[] arr){
+        int st = 0;
+        int end = arr.length-1;
+
+        while (st < end){
+            int temp = arr[st];
+            arr[st] = arr[end];
+            arr[end] = temp;
+
+            st++;
+            end--;
+        }
+    }
+
     static int[][] makeTranspose(int[][] arr, int r, int c){
         int[][] trans = new int[c][r];
 
@@ -36,6 +50,16 @@ public class TransposeArr {
         }
     }
 
+    static void rotateBy90Deg(int[][] arr, int n){
+        // reverse
+        transposeInPlace(arr, n, n);
+
+        // reverse each row of transposed
+        for(int i = 0; i < n; i++){
+            rev(arr[i]);
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -53,8 +77,11 @@ public class TransposeArr {
             }
         }
 
-        transposeInPlace(arr, r, c);
+        rotateBy90Deg(arr, r);
         printArr(arr);
+
+//        transposeInPlace(arr, r, c);
+//        printArr(arr);
 
 //        int[][] trans = makeTranspose(arr, r, c);
 //        printArr(trans);
