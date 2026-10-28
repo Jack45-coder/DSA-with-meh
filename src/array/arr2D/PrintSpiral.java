@@ -23,28 +23,28 @@ public class PrintSpiral {
 
         while(totalElements < r * c){
             // topRow --> leftCol to rightCol
-            for(int j = leftColumn; j <= rightColumn; j++){
+            for(int j = leftColumn; j <= rightColumn && totalElements < r * c; j++){
                 System.out.print(mat[topRow][j] + " ");
                 totalElements++;
             }
             topRow++;
 
             // rightCol --> topRow to bottomRow
-            for(int i = topRow; i <= bottomRow; i++){
+            for(int i = topRow; i <= bottomRow && totalElements < r * c; i++){
                 System.out.print(mat[i][rightColumn] + " ");
                 totalElements++;
             }
             rightColumn--;
 
             // bottomRow --> rightCol to leftCol
-            for(int j = rightColumn; j >= leftColumn; j--){
+            for(int j = rightColumn; j >= leftColumn && totalElements < r * c; j--){
                 System.out.print(mat[bottomRow][j] + " ");
                 totalElements++;
             }
             bottomRow--;
 
             // leftCol --> bottomRow to topRow
-            for(int i = bottomRow; i >= topRow; i--){
+            for(int i = bottomRow; i >= topRow && totalElements < r * c; i--){
                 System.out.print(mat[i][leftColumn] + " ");
                 totalElements++;
             }
