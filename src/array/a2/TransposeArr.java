@@ -1,4 +1,4 @@
-package array.arr2D;
+package array.a2;
 
 import java.util.Scanner;
 

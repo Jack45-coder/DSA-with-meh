@@ -40,7 +40,7 @@ public class PrefixSum {
             arr[i] = sc.nextInt();
         }
 
-//        int[] pref = makePrefixSumArr(arr2D);
+//        int[] pref = makePrefixSumArr(a2);
         makePrefixSum(arr);
         printArray(arr);
 

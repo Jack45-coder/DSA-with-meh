@@ -1,4 +1,4 @@
-package array.arr2D;
+package array.a2;
 
 public class My2dArray {
     public static void main(String[] args) {
