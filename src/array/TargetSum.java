@@ -18,6 +18,25 @@ public class TargetSum {
         return new int[]{-1, -1};
     }
 
+    public static boolean checkTarget(int[] arr, int target){
+        int st = 0;
+        int end = arr.length - 1;
+
+        while (st < end){
+            int sum = arr[st] + arr[end];
+
+            if(sum == target){
+                return true;
+            }else if(sum < target){
+                st++;
+            }else {
+                end--;
+            }
+        }
+
+        return false;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -33,8 +52,11 @@ public class TargetSum {
         System.out.println("Enter target: ");
         int target = sc.nextInt();
 
-        int[] result = targetSum(arr, target);
-        System.out.println(Arrays.toString(result));
+//        int[] result = targetSum(arr, target);
+//        System.out.println(Arrays.toString(result));
+
+
+        System.out.println(checkTarget(arr, target));
 
         sc.close();
     }
